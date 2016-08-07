@@ -1,21 +1,20 @@
  # CORRECT: 100%
  def solution_simple(A, K):
- 	from collections import deque
- 	rotated_A = deque(A)
- 	rotated_A.rotate(K)
- 	return list(rotated_A)
+    from collections import deque
+    rotated_A = deque(A)
+    rotated_A.rotate(K)
+    return list(rotated_A)
 
  # CORRECT: 100%
 def solution(A, K):
-	result = []
-	len_A = len(A)
+    result = []
+    len_A = len(A)
 
-	for i, elem in enumerate(A):
-		new_i = (i + 1 * K + len_A) % len_A
-		result.insert(new_i, elem)
+    for i, elem in enumerate(A):
+        new_i = (i + 1 * K + len_A) % len_A
+        result.insert(new_i, elem)
 
-	return result
-
+    return result
 
 # OTHERS
 
